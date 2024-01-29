@@ -16,13 +16,13 @@ namespace EntityFrameworkDemo.Controllers
             this._bookManagementService = bookManagementService;
         }
 
-        [HttpGet(Name = "GetAllBooks")]
+        [HttpGet("books", Name = "GetAllBooks")]
         public async Task<IEnumerable<Book>> GetAllBooks()
         {
             return await _bookManagementService.GetAllBooks();
         }
 
-        [HttpGet(Name = "GetBookById")]
+        [HttpGet("book/{id}", Name = "GetBookById")]
         public async Task<Book> GetBookById(string id)
         {
             return await _bookManagementService.GetBookById(id);
