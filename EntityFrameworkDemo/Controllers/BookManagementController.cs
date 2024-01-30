@@ -27,5 +27,11 @@ namespace EntityFrameworkDemo.Controllers
         {
             return await _bookManagementService.GetBookById(id);
         }
+
+        [HttpGet("bookByAuthor/{authId}", Name = "GetBookByAuthId")]
+        public async Task<IEnumerable<Object>> GetBookByAuthId(string authId)
+        {
+            return await _bookManagementService.GetBooksByAuthId(authId);
+        }
     }
 }

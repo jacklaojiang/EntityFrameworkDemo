@@ -7,5 +7,7 @@ namespace EntityFrameworkDemo.Services
         public Task<IEnumerable<Book>> GetAllBooks();
 
         public Task<Book> GetBookById(string id);
+
+        public Task<IEnumerable<Object>> GetBooksByAuthId(string authId);
     }
 }
